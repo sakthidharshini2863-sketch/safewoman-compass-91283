@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Car, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { CitySearch } from '@/components/CitySearch';
 import logo from '@/assets/safeshe-logo.png';
 
 interface TransportService {
@@ -79,20 +78,6 @@ const TransportFinder = () => {
           </Button>
         </div>
       </header>
-
-      {/* Hero Section */}
-      <section className="py-12 px-4 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10">
-        <div className="container mx-auto max-w-4xl text-center">
-          <Car className="w-16 h-16 mx-auto mb-6 text-primary" />
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Trusted Transport Finder
-          </h1>
-          <p className="text-xl text-muted-foreground mb-8">
-            Find verified ride apps and women-friendly cab services in your city
-          </p>
-          <CitySearch onSearch={handleSearch} />
-        </div>
-      </section>
 
       {/* Results Section */}
       {searchedCity && (
