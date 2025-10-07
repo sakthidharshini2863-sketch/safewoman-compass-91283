@@ -16,10 +16,10 @@ interface TransportService {
 
 const transportData: Record<string, TransportService[]> = {
   'new york': [
-    { name: 'Uber', type: 'Ride-sharing', phone: '1-833-873-8237'description: 'Global ride-sharing service with safety features', available: true },
-    { name: 'Lyft', type: 'Ride-sharing', phone:'(844)554-1297' description: 'Ride-sharing with women-friendly features', available: true },
+    { name: 'Uber', type: 'Ride-sharing', phone: '1-833-873-8237',description: 'Global ride-sharing service with safety features', available: true },
+    { name: 'Lyft', type: 'Ride-sharing', phone:'(844)554-1297', description: 'Ride-sharing with women-friendly features', available: true },
     { name: "Women's Taxi NYC", type: 'Women-Only', phone: '212-777-7777', description: 'Taxi service operated by women for women', available: true },
-    { name: 'Curb', type: 'Taxi App', phone:'' description: 'Official NYC taxi app', available: true },
+    { name: 'Curb', type: 'Taxi App', phone:'994481', description: 'Official NYC taxi app', available: true },
   ],
   'mumbai': [
     { name: 'Uber', type: 'Ride-sharing', description: 'Global ride-sharing service with safety features', available: true },
