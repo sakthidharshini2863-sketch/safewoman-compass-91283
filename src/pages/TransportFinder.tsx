@@ -49,6 +49,66 @@ const transportData: Record<string, TransportService[]> = {
     { name: 'Bolt', type: 'Ride-sharing', description: 'European ride-sharing', available: true },
     { name: 'G7 Taxi', type: 'Licensed Taxi', phone: '3607', description: 'Official Paris taxi service', available: true },
   ],
+  'singapore': [
+    { name: 'Grab', type: 'Ride-sharing', description: 'Southeast Asia’s leading ride-hailing app', available: true },
+    { name: 'TADA', type: 'Ride-sharing', description: 'Commission-free ride-hailing service', available: true },
+    { name: 'ComfortDelGro', type: 'Licensed Taxi', phone: '65521111', description: 'Largest taxi operator in Singapore', available: true },
+  ]
+  'dubai': [
+    { name: 'Careem', type: 'Ride-sharing', description: 'Middle East ride-hailing app (owned by Uber)', available: true },
+    { name: 'Uber', type: 'Ride-sharing', description: 'Global ride-sharing service', available: true },
+    { name: 'Dubai Taxi', type: 'Licensed Taxi', phone: '80088088', description: 'Government-run taxi service', available: true },
+  ],
+  'coimbatore': [
+    { name: 'Ola', type: 'Ride-sharing', description: 'India’s leading ride-hailing service', available: true },
+    { name: 'Uber', type: 'Ride-sharing', description: 'Global ride-sharing service', available: true },
+    { name: 'Red Taxi', type: 'Licensed Taxi', phone: '0422-4567890', description: 'Local Coimbatore taxi service', available: true },
+  ],
+  'chennai': [
+    { name: 'Ola', type: 'Ride-sharing', description: 'India’s leading ride-hailing service', available: true },
+    { name: 'Uber', type: 'Ride-sharing', description: 'Global ride-sharing service', available: true },
+    { name: 'Fast Track', type: 'Licensed Taxi', phone: '044-28889999', description: 'One of Chennai’s biggest cab networks', available: true },
+  ],
+  'bengaluru': [
+    { name: 'Ola', type: 'Ride-sharing', description: 'India’s leading ride-hailing service', available: true },
+    { name: 'Uber', type: 'Ride-sharing', description: 'Global ride-sharing service', available: true },
+    { name: 'Namma Yatri', type: 'Auto-rickshaw App', description: 'Auto-rickshaw aggregator in partnership with local drivers', available: true },
+  ],
+  'hyderabad': [
+    { name: 'Ola', type: 'Ride-sharing', description: 'India’s leading ride-hailing service', available: true },
+    { name: 'Uber', type: 'Ride-sharing', description: 'Global ride-sharing service', available: true },
+    { name: 'Meru Cabs', type: 'Licensed Taxi', description: 'Reliable taxi service with pre-booking options', available: true },
+  ],
+  'moscow': [
+    { name: 'Yandex Go', type: 'Ride-sharing', description: 'Russia’s leading ride-hailing app (formerly Yandex.Taxi)', available: true },
+    { name: 'Citymobil', type: 'Ride-sharing', description: 'Affordable rides across Moscow', available: true },
+    { name: 'Maxim', type: 'Ride-sharing', description: 'Wide presence across Russian cities', available: true },
+  ],
+  'bangkok': [
+    { name: 'Grab', type: 'Ride-sharing', description: 'Popular across Southeast Asia including Thailand', available: true },
+    { name: 'Bolt', type: 'Ride-sharing', description: 'Growing presence in Bangkok', available: true },
+    { name: 'All Thai Taxi', type: 'Licensed Taxi', phone: '1624', description: 'Modern taxi services by Nakhonchai Air', available: true },
+  ],
+  'rome': [
+    { name: 'FREE NOW', type: 'Ride-sharing', description: 'Taxi and ride-hailing app in Italy', available: true },
+    { name: 'ItTaxi', type: 'Licensed Taxi', phone: '06 3570', description: 'Official Roman taxi-hailing app', available: true },
+    { name: 'Uber', type: 'Ride-sharing', description: 'Available in Rome for Uber Black', available: true },
+  ],
+  'hong_kong': [
+    { name: 'Uber', type: 'Ride-sharing', description: 'Global ride-hailing service available in Hong Kong', available: true },
+    { name: 'HKTaxi', type: 'Licensed Taxi', description: 'Popular local taxi-hailing app for red, green, and blue taxis', available: true },
+    { name: 'GO Taxi', type: 'Licensed Taxi', description: 'Another reliable local taxi app in Hong Kong', available: true },
+  ],
+  'seoul': [
+    { name: 'Kakao T', type: 'Ride-sharing', description: 'Most widely used taxi and ride-hailing app in South Korea', available: true },
+    { name: 'Tada', type: 'Ride-sharing', description: 'Premium van-hailing service, app-based in Seoul', available: true },
+    { name: 'International Taxi', type: 'Licensed Taxi', phone: '1644-2255', description: 'English-speaking taxi service for international visitors', available: true },
+  ],
+  'bali': [
+    { name: 'Gojek', type: 'Ride-sharing', description: 'Indonesia-based ride-hailing and delivery super app', available: true },
+    { name: 'Grab', type: 'Ride-sharing', description: 'Southeast Asia’s leading ride-hailing app, active in Bali', available: true },
+    { name: 'Blue Bird', type: 'Licensed Taxi', phone: '+62 361 701111', description: 'Trusted traditional taxi service in Bali and other cities', available: true },
+  ]
 };
 
 const TransportFinder = () => {
