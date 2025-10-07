@@ -15,7 +15,7 @@ interface Stay {
   safetyFeatures: string[];
   description: string;
   image: string;
-  website?: string;
+  
 }
 
 const staysData: Record<string, Stay[]> = {
@@ -28,7 +28,7 @@ const staysData: Record<string, Stay[]> = {
       safetyFeatures: ['24/7 Security', 'Women-Only Floor', 'CCTV Surveillance', 'Female Staff Available'],
       description: 'Historic boutique hotel with dedicated women-only floor and excellent safety measures.',
       image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400',
-      website:'https://www.makemytrip.com/hotels/hotel-details/?hotelId=4219023832548079&_uCurrency=INR&city=CTNEWY&cmp=SEM%7CD%7CIH%7CG%7CHname%7CIH_Hname_TROAS_CAT_C_New+York%7C4219023832548079%7CRSA%7CRegular&country=USA&gad_campaignid=20333195888&gad_source=1&gbraid=0AAAAAD5Az1TlhhL_D6Svtg2dI3tsO7oQi&gclid=Cj0KCQjw9JLHBhC-ARIsAK4PhcoPx-vUMqjqHVLnMkwKlcCZRQee3O5Afr8aH4asRO20vzm1nzT4wdUaAiNNEALw_wcB&lat=40.73818&lng=-74.00969&locusId=CTNEWY&locusType=city&rank=1&reference=hotel&roomStayQualifier=2e0e&searchText=New+York&topHtlId=4219023832548079&type=city&mtkeys=undefined&isPropSearch=T'
+      
     },
     {
       name: 'Sisters Hostel NYC',
@@ -38,7 +38,7 @@ const staysData: Record<string, Stay[]> = {
       safetyFeatures: ['Female-Only Dorms', 'Secure Lockers', '24/7 Reception', 'Safety Workshops'],
       description: 'Women-only hostel with a focus on safety and community building.',
       image: 'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=400',
-      website:'https://sister-city-new-york.hotels-innewyork.com/en/'
+      
     },
   ],
   'mumbai': [
@@ -50,7 +50,7 @@ const staysData: Record<string, Stay[]> = {
       safetyFeatures: ['24/7 Security', 'Women-Only Section', 'Female Concierge', 'Secure Parking'],
       description: 'Luxury hotel with dedicated ladies wing and premium safety features.',
       image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=400',
-      website:'https://www.tajhotels.com/en-in/offers/festivals-of-india-offer?gad_source=1&gad_campaignid=21901686463&gbraid=0AAAAADhl-_8uR6XeZt-6VT2vvK0OG9A8B&gclid=Cj0KCQjw9JLHBhC-ARIsAK4PhcqrBhuM1lDwMXXOsKd63yOQARdCSTFhOJsJZ35WMKI1FjjUO_FKtoAaAmc0EALw_wcB'
+     
     },
     {
       name: 'Women\'s Travelers Home',
@@ -60,7 +60,7 @@ const staysData: Record<string, Stay[]> = {
       safetyFeatures: ['Women-Only', 'Security Guard', 'CCTV', 'Female Manager'],
       description: 'Cozy hostel exclusively for women travelers with safety as priority.',
       image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400',
-      website:'https://www.hostelz.com/hostels/India/Mumbai/female-only-hostels'
+      
     },
   ],
   'london': [
@@ -72,7 +72,7 @@ const staysData: Record<string, Stay[]> = {
       safetyFeatures: ['24/7 Security', 'Well-Lit Entrance', 'Safe Boxes', 'Female Staff'],
       description: 'Elegant hotel known for excellent safety measures and female-friendly environment.',
       image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400',
-      website:'https://montaguehotel.com/'
+      
     },
     {
       name: 'Women Only Hostel London',
@@ -82,7 +82,6 @@ const staysData: Record<string, Stay[]> = {
       safetyFeatures: ['Female-Only', 'Secure Entry', 'Lockers', 'Safety Training'],
       description: 'Modern hostel exclusively for women with comprehensive safety features.',
       image: 'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=400',
-      website:'https://www.hostelworld.com/hostels/p/316723/hostelle-women-only-hostel-london/?source=ppc_gooads_nonbrand_dsk_dsa_pn_en_uk&network=g&campaign_id=20966974016&adgroup_id=158065486037&criteria_id=dsa-443313842330&creative_id=688684467093&location_physical_id=1007810&location_interest_id=1006886&adposition=&uniqueclickID=10105109688575261357&sub_keyword=&sub_ad=&sub_publisher=ADW&gclsrc=aw.ds&gad_source=1&gad_campaignid=20966974016&gbraid=0AAAAAD9QXQYecYFp4KQ61iIO4w28rJI1U&gclid=Cj0KCQjw9JLHBhC-ARIsAK4PhcqxFuW-LW09kFrbBR1ruuX56UDLOZKuLRPbt_MEtX00yy2sxoUvDpwaAhEaEALw_wcB'
     },
   ],
   'delhi': [
@@ -94,7 +93,7 @@ const staysData: Record<string, Stay[]> = {
       safetyFeatures: ['24/7 Security', 'Female Floor', 'Panic Buttons', 'Female Concierge'],
       description: 'Premium hotel with special accommodations for women travelers.',
       image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=400',
-      website:'https://www.thelalit.com/the-lalit-delhi/?srsltid=AfmBOorqoz5aSDMp_F3461o9l5wmH4CgxTLeStTpe-hka4quW8iSU7YO'
+      
     },
     {
       name: 'YWCA Women\'s Hostel',
@@ -104,7 +103,7 @@ const staysData: Record<string, Stay[]> = {
       safetyFeatures: ['Women-Only', 'Security Guard', 'CCTV', 'Emergency Support'],
       description: 'Budget-friendly hostel with focus on women\'s safety and comfort.',
       image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400',
-      website:'https://www.ywcaofdelhi.org/chww.html'
+      
     },
   ],
   'paris': [
@@ -116,7 +115,7 @@ const staysData: Record<string, Stay[]> = {
       safetyFeatures: ['24/7 Security', 'Safe District', 'Female Staff', 'Secure Rooms'],
       description: 'Charming hotel in safe district with excellent safety measures.',
       image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400',
-      website:'https://www.hotel-marais-home.fr/en/'
+      
     },
   ],
 };
