@@ -67,17 +67,16 @@ const TransportFinder = () => {
       {/* Header */}
       <header className="border-b border-border/40 bg-card/50 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={() => navigate('/')}
-            className="gap-2"
-          >
-            <ArrowLeft className="w-4 h-4" />
+          <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigate('/')}>
+            <img src={logo} alt="SafeShe Logo" className="h-12 w-auto" />
+            <h1 className="text-xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+              SafeShe
+            </h1>
+          </div>
+          <Button variant="outline" onClick={() => navigate('/')}>
+            <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Button>
-          <img src={logo} alt="SafeShe Logo" className="h-10 w-auto" />
-          <div className="w-[100px]"></div>
         </div>
       </header>
 
