@@ -675,7 +675,31 @@ const Index = () => {
           <div className="animate-fade-in" style={{ animationDelay: '0.3s', animationFillMode: 'both' }}>
             <CitySearch onSearch={handleSearch} />
           </div>
-          <div className="flex justify-center mt-6 animate-fade-in" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 animate-fade-in" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
+            <Button 
+              variant="hero" 
+              size="lg"
+              onClick={() => navigate('/transport-finder')}
+              className="bg-white/10 text-white border border-white/20 hover:bg-white/20 backdrop-blur-sm"
+            >
+              Transport Finder
+            </Button>
+            <Button 
+              variant="hero" 
+              size="lg"
+              onClick={() => navigate('/friendly-stays')}
+              className="bg-white/10 text-white border border-white/20 hover:bg-white/20 backdrop-blur-sm"
+            >
+              Friendly Stays
+            </Button>
+            <Button 
+              variant="hero" 
+              size="lg"
+              onClick={() => navigate('/safe-route-demo')}
+              className="bg-white/10 text-white border border-white/20 hover:bg-white/20 backdrop-blur-sm"
+            >
+              Safe Route Demo
+            </Button>
             <Button 
               variant="hero" 
               size="lg"
