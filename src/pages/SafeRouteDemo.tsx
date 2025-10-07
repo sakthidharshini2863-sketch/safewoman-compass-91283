@@ -19,7 +19,7 @@ const SafeRouteDemo = () => {
   const navigate = useNavigate();
   const [showRoutes, setShowRoutes] = useState(false);
 
-  const normalRoute: RouteInfo = {
+  const normalRoute : RouteInfo = {
     type: 'normal',
     distance: '3.2 km',
     duration: '12 mins',
@@ -117,7 +117,7 @@ const SafeRouteDemo = () => {
                 
                 {/* Route paths */}
                 <svg className="absolute inset-0 w-full h-full" viewBox="0 0 800 450">
-                  {/* Normal route - Orange/Red dashed */}
+                  {/* Normal route Mumbai - Orange/Red dashed */}
                   <path
                     d="M 100 350 Q 300 300, 400 250 T 700 100"
                     stroke="hsl(0 84% 60%)"
@@ -127,7 +127,7 @@ const SafeRouteDemo = () => {
                     opacity="0.8"
                   />
                   
-                  {/* Safe route - Green solid */}
+                  {/* Safe route Thane- Green solid */}
                   <path
                     d="M 100 350 Q 250 350, 400 320 Q 550 290, 700 100"
                     stroke="hsl(142 76% 36%)"
