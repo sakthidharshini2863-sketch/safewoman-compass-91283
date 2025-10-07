@@ -25,6 +25,13 @@ const availableCities = [
   'Ahmedabad',
   'Hyderabad',
   'Paris',
+  'tokyo',
+  'sydney',
+  'toronto',
+  'singapore',
+  'moscow',
+  'madurai',
+  'coimbatore',
 ];
 
 export const CitySearch = ({ onSearch }: CitySearchProps) => {
