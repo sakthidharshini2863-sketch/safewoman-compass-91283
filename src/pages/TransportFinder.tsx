@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Car, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { CitySearch } from '@/components/CitySearch';
+
 import logo from '@/assets/safeshe-logo.png';
 
 interface TransportService {
