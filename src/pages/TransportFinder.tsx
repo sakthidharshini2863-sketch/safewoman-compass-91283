@@ -23,7 +23,7 @@ const transportData: Record<string, TransportService[]> = {
   ],
   'mumbai': [
     { name: 'Uber', type: 'Ride-sharing',phone:'80 4685 2999', description: 'Global ride-sharing service with safety features', available: true },
-    { name: 'Ola', type: 'Ride-sharing',,phone:'806 735 0900',description: 'Indian ride-sharing with SOS button', available: true },
+    { name: 'Ola', type: 'Ride-sharing',phone:'806 735 0900',description: 'Indian ride-sharing with SOS button', available: true },
     { name: 'WomenCab Mumbai', type: 'Women-Only', phone: '022-2345-6789', description: 'Cab service by women drivers', available: true },
     { name: 'Meru Cabs', type: 'Radio Taxi', phone: '44224422', description: 'Trusted radio taxi service', available: true },
   ],
