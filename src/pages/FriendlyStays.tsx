@@ -15,7 +15,7 @@ interface Stay {
   safetyFeatures: string[];
   description: string;
   image: string;
-  
+  website: string;
 }
 
 const staysData: Record<string, Stay[]> = {
@@ -28,7 +28,7 @@ const staysData: Record<string, Stay[]> = {
       safetyFeatures: ['24/7 Security', 'Women-Only Floor', 'CCTV Surveillance', 'Female Staff Available'],
       description: 'Historic boutique hotel with dedicated women-only floor and excellent safety measures.',
       image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400',
-      
+      website: 'https://www.thejanehotel.com',
     },
     {
       name: 'Sisters Hostel NYC',
@@ -38,7 +38,7 @@ const staysData: Record<string, Stay[]> = {
       safetyFeatures: ['Female-Only Dorms', 'Secure Lockers', '24/7 Reception', 'Safety Workshops'],
       description: 'Women-only hostel with a focus on safety and community building.',
       image: 'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=400',
-      
+      website: 'https://www.sistershostelnyc.com',
     },
   ],
   'mumbai': [
@@ -50,7 +50,7 @@ const staysData: Record<string, Stay[]> = {
       safetyFeatures: ['24/7 Security', 'Women-Only Section', 'Female Concierge', 'Secure Parking'],
       description: 'Luxury hotel with dedicated ladies wing and premium safety features.',
       image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=400',
-     
+      website: 'https://www.tajhotels.com',
     },
     {
       name: 'Women\'s Travelers Home',
@@ -60,7 +60,7 @@ const staysData: Record<string, Stay[]> = {
       safetyFeatures: ['Women-Only', 'Security Guard', 'CCTV', 'Female Manager'],
       description: 'Cozy hostel exclusively for women travelers with safety as priority.',
       image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400',
-      
+      website: 'https://www.womentravelershome.com',
     },
   ],
   'london': [
@@ -72,7 +72,7 @@ const staysData: Record<string, Stay[]> = {
       safetyFeatures: ['24/7 Security', 'Well-Lit Entrance', 'Safe Boxes', 'Female Staff'],
       description: 'Elegant hotel known for excellent safety measures and female-friendly environment.',
       image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400',
-      
+      website: 'https://www.montaguehotel.com',
     },
     {
       name: 'Women Only Hostel London',
@@ -82,6 +82,7 @@ const staysData: Record<string, Stay[]> = {
       safetyFeatures: ['Female-Only', 'Secure Entry', 'Lockers', 'Safety Training'],
       description: 'Modern hostel exclusively for women with comprehensive safety features.',
       image: 'https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=400',
+      website: 'https://www.womenonlyhostels.com',
     },
   ],
   'delhi': [
@@ -93,7 +94,7 @@ const staysData: Record<string, Stay[]> = {
       safetyFeatures: ['24/7 Security', 'Female Floor', 'Panic Buttons', 'Female Concierge'],
       description: 'Premium hotel with special accommodations for women travelers.',
       image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=400',
-      
+      website: 'https://www.thelalit.com',
     },
     {
       name: 'YWCA Women\'s Hostel',
@@ -103,7 +104,7 @@ const staysData: Record<string, Stay[]> = {
       safetyFeatures: ['Women-Only', 'Security Guard', 'CCTV', 'Emergency Support'],
       description: 'Budget-friendly hostel with focus on women\'s safety and comfort.',
       image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400',
-      
+      website: 'https://www.ywcadelhi.org',
     },
   ],
   'paris': [
@@ -115,7 +116,7 @@ const staysData: Record<string, Stay[]> = {
       safetyFeatures: ['24/7 Security', 'Safe District', 'Female Staff', 'Secure Rooms'],
       description: 'Charming hotel in safe district with excellent safety measures.',
       image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400',
-      
+      website: 'https://www.hotellemarais.com',
     },
   ],
 };
@@ -220,7 +221,7 @@ const FriendlyStays = () => {
                       </CardHeader>
                       <CardContent>
                         <p className="text-muted-foreground mb-4">{stay.description}</p>
-                        <div>
+                        <div className="mb-4">
                           <h4 className="font-semibold mb-2 flex items-center gap-2">
                             <Shield className="w-4 h-4 text-green-600" />
                             Safety Features:
@@ -233,6 +234,12 @@ const FriendlyStays = () => {
                             ))}
                           </div>
                         </div>
+                        <Button 
+                          className="w-full" 
+                          onClick={() => window.open(stay.website, '_blank')}
+                        >
+                          Visit Website
+                        </Button>
                       </CardContent>
                     </Card>
                   ))}
