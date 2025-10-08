@@ -4,6 +4,8 @@ import { ArrowLeft, MapPin, Clock, Shield, AlertTriangle, Navigation } from 'luc
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 import logo from '@/assets/safeshe-logo.png';
 
 interface RouteInfo {
@@ -18,8 +20,18 @@ interface RouteInfo {
 const SafeRouteDemo = () => {
   const navigate = useNavigate();
   const [showRoutes, setShowRoutes] = useState(false);
+  const [startCity, setStartCity] = useState('');
+  const [endCity, setEndCity] = useState('');
+  const [routeTitle, setRouteTitle] = useState('');
 
-  const normalRoute : RouteInfo = {
+  const handleShowRoutes = () => {
+    if (startCity.trim() && endCity.trim()) {
+      setRouteTitle(`${startCity} to ${endCity}`);
+      setShowRoutes(true);
+    }
+  };
+
+  const normalRoute: RouteInfo = {
     type: 'normal',
     distance: '3.2 km',
     duration: '12 mins',
@@ -70,22 +82,56 @@ const SafeRouteDemo = () => {
 
       {/* Hero Section */}
       <section className="py-12 px-4 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10">
-        <div className="container mx-auto max-w-4xl text-center">
-          <Navigation className="w-16 h-16 mx-auto mb-6 text-primary" />
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Safe Route Demo
-          </h1>
-          <p className="text-xl text-muted-foreground mb-8">
-            Compare normal routes with safer alternatives designed for women's safety
-          </p>
-          <Button 
-            variant="hero" 
-            size="lg"
-            onClick={() => setShowRoutes(true)}
-            className="shadow-[var(--shadow-glow)]"
-          >
-            Show Route Comparison
-          </Button>
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-8">
+            <Navigation className="w-16 h-16 mx-auto mb-6 text-primary" />
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              Safe Route Demo
+            </h1>
+            <p className="text-xl text-muted-foreground">
+              Compare normal routes with safer alternatives designed for women's safety
+            </p>
+          </div>
+          
+          <Card className="max-w-2xl mx-auto">
+            <CardHeader>
+              <CardTitle>Enter Your Route</CardTitle>
+              <CardDescription>
+                Specify your starting location and destination to see the route comparison
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="space-y-2">
+                <Label htmlFor="startCity">Starting Location</Label>
+                <Input
+                  id="startCity"
+                  placeholder="e.g., Home, Office, Station"
+                  value={startCity}
+                  onChange={(e) => setStartCity(e.target.value)}
+                  onKeyPress={(e) => e.key === 'Enter' && handleShowRoutes()}
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="endCity">Destination</Label>
+                <Input
+                  id="endCity"
+                  placeholder="e.g., Downtown, Mall, Friend's House"
+                  value={endCity}
+                  onChange={(e) => setEndCity(e.target.value)}
+                  onKeyPress={(e) => e.key === 'Enter' && handleShowRoutes()}
+                />
+              </div>
+              <Button 
+                className="w-full"
+                size="lg"
+                onClick={handleShowRoutes}
+                disabled={!startCity.trim() || !endCity.trim()}
+              >
+                <Navigation className="w-4 h-4 mr-2" />
+                Show Route Comparison
+              </Button>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
@@ -94,7 +140,7 @@ const SafeRouteDemo = () => {
         <section className="py-12 px-4">
           <div className="container mx-auto max-w-6xl">
             <h2 className="text-3xl font-bold text-center mb-8">
-              Route Comparison: Home to Downtown
+              Route Comparison: {routeTitle}
             </h2>
 
             {/* Map Demo - Static representation */}
