@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, Home, Star, MapPin, Shield } from 'lucide-react';
+import { ArrowLeft, Home, Star, MapPin, Shield, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { CitySearch } from '@/components/CitySearch';
+import { Input } from '@/components/ui/input';
 import logo from '@/assets/safeshe-logo.png';
 
 interface Stay {
@@ -123,11 +123,12 @@ const staysData: Record<string, Stay[]> = {
 const FriendlyStays = () => {
   const navigate = useNavigate();
   const [searchedCity, setSearchedCity] = useState<string>('');
+  const [cityInput, setCityInput] = useState<string>('');
   const [stays, setStays] = useState<Stay[]>([]);
 
-  const handleSearch = (city: string) => {
-    const normalizedCity = city.toLowerCase();
-    setSearchedCity(city);
+  const handleSearch = () => {
+    const normalizedCity = cityInput.toLowerCase();
+    setSearchedCity(cityInput);
     setStays(staysData[normalizedCity] || []);
   };
 
@@ -159,7 +160,20 @@ const FriendlyStays = () => {
           <p className="text-xl text-muted-foreground mb-8">
             Discover hotels and hostels rated as safe and welcoming for women travelers
           </p>
-          <CitySearch onSearch={handleSearch} />
+          <div className="flex gap-2 max-w-md mx-auto">
+            <Input
+              type="text"
+              placeholder="Enter city name..."
+              value={cityInput}
+              onChange={(e) => setCityInput(e.target.value)}
+              onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
+              className="flex-1"
+            />
+            <Button onClick={handleSearch}>
+              <Search className="w-4 h-4 mr-2" />
+              Search
+            </Button>
+          </div>
         </div>
       </section>
 
